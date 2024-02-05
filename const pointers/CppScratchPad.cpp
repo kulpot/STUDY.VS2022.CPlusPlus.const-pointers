@@ -5,7 +5,20 @@ using std::endl;
 //------------------------- const pointers -----------------------------------------------------------------
 //ref link:https://www.youtube.com/watch?v=BimM1lLeZg8&list=PLRwVmtr-pp070AKU7G71q8XyCRttsWIvi&index=2&t=1s
 
+class Cow
+{
+	int mooCount;
+public:
+	Cow() { mooCount = 0; }
+	void moo() { cout << mooCount++ << endl; }
+	void saySomething() const { cout << "Hello" << endl; }
+};
 
+void main()
+{
+	const Cow c;
+	c.saySomething();
+}
 
 
 
