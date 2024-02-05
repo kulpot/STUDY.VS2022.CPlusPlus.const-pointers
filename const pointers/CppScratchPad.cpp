@@ -17,8 +17,10 @@ public:
 void main()
 {
 	Cow* c = new Cow;
-	const Cow* constCow = c;
-
+	//const Cow* constCow = c;
+	Cow* const constCow = c;		//pointer itself is const
+	c->moo();
+	constCow->moo();		// error const Cow pointer
 	delete c;
 }
 
