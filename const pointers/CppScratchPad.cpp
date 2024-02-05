@@ -19,8 +19,9 @@ void main()
 	Cow* c = new Cow;
 	//const Cow* constCow = c;
 	Cow* const constCow = c;		//pointer itself is const
+	constCow = new Cow;		// error cant modify const constCow
 	c->moo();
-	constCow->moo();		// error const Cow pointer
+	constCow->moo();		// error cant modify const Cow*	, solution: Cow* const constCow = c;
 	delete c;
 }
 
