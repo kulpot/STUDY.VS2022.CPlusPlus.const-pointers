@@ -16,8 +16,10 @@ public:
 
 void main()
 {
-	const Cow c;
-	c.saySomething();
+	Cow* c = new Cow;
+	const Cow* constCow = c;
+
+	delete c;
 }
 
 
